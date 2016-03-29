@@ -23,46 +23,44 @@ def imc(peso, altura):
 
 # Esta funcao recebe como parametros o dia e mes de nascimento
 # e retorna o signo 
-# entrada dia: 1..31, mes: 1..12
+# entrada dia: 0..31, mes: 0..12
 def signo(dia, mes):
-    mes_ano = { 'JANEIRO':1,
-                'FEVEREIRO':2,
-                'MARCO':3,
-                'ABRIL':4,
-                'MAIO':5,
-                'JUNHO':6,
-                'JULHO':7,
-                'AGOSTO':8,
-                'SETEMBRO':9,
-                'OUTUBRO':10,
-                'NOVEMBRO':11,
-                'DEZEMBRO':12 }
-    str_to_return = ''
-    if(dia >= 21 and mes == mes_ano['MARCO']) or (dia <= 20 and mes == mes_ano['ABRIL']):
-        str_to_return = 'Áries' 
-    elif(dia >= 21 and mes == mes_ano['ABRIL']) or (dia <= 20 and mes == mes_ano['MAIO']):
-        str_to_return = 'Touro' 
-    elif(dia >= 21 and mes == mes_ano['MAIO']) or (dia <= 21 and mes == mes_ano['JUNHO']):
-        str_to_return = 'Gêmeos'
-    elif(dia >= 21 and mes == mes_ano['JUNHO']) or (dia <= 21 and mes == mes_ano['JULHO']):
-        str_to_return = 'Câncer'
-    elif(dia >= 22 and mes == mes_ano['JULHO']) or (dia <= 22 and mes == mes_ano['AGOSTO']):
-        str_to_return = 'Leão' 
-    elif(dia >= 23 and mes == mes_ano['AGOSTO']) or (dia <= 22 and mes == mes_ano['SETEMBRO']):
-        str_to_return = 'Virgem'
-    elif(dia >= 23 and mes == mes_ano['SETEMBRO']) or (dia <= 22 and mes == mes_ano['OUTUBRO']):
-        str_to_return = 'Libra' 
-    elif(dia >= 23 and mes == mes_ano['OUTUBRO']) or (dia <= 21 and mes == mes_ano['NOVEMBRO']):
-        str_to_return = 'Escorpião' 
-    elif(dia >= 22 and mes == mes_ano['NOVEMBRO']) or (dia <= 21 and mes == mes_ano['DEZEMBRO']):
-        str_to_return = 'Sagitário'
-    elif(dia >= 22 and mes == mes_ano['DEZEMBRO']) or (dia <= 20 and mes == mes_ano['JANEIRO']):
-        str_to_return = 'Capricórnio'
-    elif(dia >= 21 and mes == mes_ano['JANEIRO']) or (dia <= 19 and mes == mes_ano['FEVEREIRO']):
-        str_to_return = 'Aquário'
-    elif(dia >= 20 and mes == mes_ano['FEVEREIRO']) or (dia <= 20 and mes == mes_ano['MARCO']):
-        str_to_return = 'Peixes'
-    return str_to_return
+    JANEIRO   = 1
+    FEVEREIRO = 2
+    MARCO     = 3
+    ABRIL     = 4
+    MAIO      = 5
+    JUNHO     = 6
+    JULHO     = 7
+    AGOSTO    = 8
+    SETEMBRO  = 9
+    OUTUBRO   = 10
+    NOVEMBRO  = 11
+    DEZEMBRO  = 12
+    if(dia >= 21 and mes == MARCO) or (dia <= 20 and mes == ABRIL):
+        return('Áries') 
+    elif(dia >= 21 and mes == ABRIL) or (dia <= 20 and mes == MAIO):
+        return('Touro') 
+    elif(dia >= 21 and mes == MAIO) or (dia <= 21 and mes == JUNHO):
+        return('Gêmeos')
+    elif(dia >= 21 and mes == JUNHO) or (dia <= 21 and mes == JULHO):
+        return('Câncer')
+    elif(dia >= 22 and mes == JULHO) or (dia <= 22 and mes == AGOSTO):
+        return('Leão') 
+    elif(dia >= 23 and mes == AGOSTO) or (dia <= 22 and mes == SETEMBRO):
+        return('Virgem')
+    elif(dia >= 23 and mes == SETEMBRO) or (dia <= 22 and mes == OUTUBRO):
+        return('Libra') 
+    elif(dia >= 23 and mes == OUTUBRO) or (dia <= 21 and mes == NOVEMBRO):
+        return('Escorpião') 
+    elif(dia >= 22 and mes == NOVEMBRO) or (dia <= 21 and mes == DEZEMBRO):
+        return('Sagitário')
+    elif(dia >= 22 and mes == DEZEMBRO) or (dia <= 20 and mes == JANEIRO):
+        return('Capricórnio')
+    elif(dia >= 21 and mes == JANEIRO) or (dia <= 19 and mes == FEVEREIRO):
+        return('Aquário')
+    elif(dia >= 20 and mes == FEVEREIRO) or (dia <= 20 and mes == MARCO):
+        return('Peixes')
 
 # Funcao para validar cpf baseada no documento encontrado no seguinte end
 # http://gurudoexcel.com/como-e-feito-o-calculo-de-validacao-cpf/
